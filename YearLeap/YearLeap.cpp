@@ -4,7 +4,7 @@
 using namespace std;
 
 
-bool IsYearLeap(short Year)
+bool IsLeapYear(short Year)
 {
     if (Year % 400 == 0)
     {
@@ -36,13 +36,13 @@ short ReadYear()
 int main()
 {
     short Year = ReadYear();
-    if (IsYearLeap(Year))
+    if (IsLeapYear(Year))
     {
-        cout << "\nyes ; year  [" << Year << "] is year Leap \n";
+        cout << "\nyes ; year  [" << Year << "] is Leap year  \n";
     }
     else 
     {
-        cout << "\nyes ; year [" << Year << "] is year Leap \n";
+        cout << "\nyes ; year [" << Year << "] is Leap year \n";
     }
     system("pause>0");
 }
