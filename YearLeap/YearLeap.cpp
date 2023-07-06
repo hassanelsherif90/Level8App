@@ -3,26 +3,29 @@
 
 using namespace std;
 
+// bool IsLeapYear(short Year)
+// {
+//     if (Year % 400 == 0)
+//     {
+//         return true;
+//     }
+//     else if (Year % 100 == 0)
+//     {
+//         return false;
+//     }
+//     else if (Year % 4 == 0)
+//     {
+//         return true;
+//     }
+//     else 
+//     {
+//         return false;
+//     }
+// }
 
-bool IsLeapYear(short Year)
+bool IsLeapYear( short Year )
 {
-    if (Year % 400 == 0)
-    {
-        return true;
-    }
-    else if (Year % 100 == 0)
-    {
-        return false;
-    }
-    else if (Year % 4 == 0)
-    {
-        return true;
-    }
-    else 
-    {
-        return false;
-    }
-
+    return (Year % 400 == 0 ) || (Year % 4 == 0 && Year !=0) ;
 }
 
 short ReadYear()
