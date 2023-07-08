@@ -73,5 +73,5 @@ int main()
     short Year = ReadYear();
     short Month = ReadMonth();
     PrintAll(Month, Year);
-    // system("pause>0");
+    system("pause>0");
 }
