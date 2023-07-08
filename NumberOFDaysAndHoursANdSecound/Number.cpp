@@ -3,14 +3,14 @@
 
 using namespace std;
 
-bool IsYearLeap( short Year )
+bool IsLeapYear( short Year )
 {
     return (Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0);
 }
 
 int NumberOfDays(short Year)
 {
-    return ( IsYearLeap( Year ) ? 366 : 365);
+    return ( IsLeapYear( Year ) ? 366 : 365);
 }
 
 int NumberOfHours(short Year)
