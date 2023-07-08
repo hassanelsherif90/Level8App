@@ -65,7 +65,7 @@ void PrintAll(short Month,short Year)
     cout << "Number Of Days in Year     [ " << Year << "] : " << NumberOfDays(Month ,Year) << endl;
     cout << "Number Of Hours in Year    [ " << Year << "] : " << NumberOfHours(Month ,Year) << endl;
     cout << "Number Of Minutes in Year  [ " << Year << "] : " << NumberOfMinutes(Month ,Year)<< endl;
-    cout << "Number Of Seconds in Year  [ " << Year << "] : " <<NumberOfSeconds(Month ,Year) << endl << endl;
+    cout << "Number Of Seconds in Year  [ " << Year << "] : " << NumberOfSeconds(Month ,Year) << endl << endl;
 }
 
 int main()
