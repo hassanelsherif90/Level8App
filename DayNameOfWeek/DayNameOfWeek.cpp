@@ -51,3 +51,4 @@ int main()
     cout << "\nDay Name  : " << DayShortName(DayOrderOfWeek(Day, Month, Year));
     system("pause>0");
 }
+
