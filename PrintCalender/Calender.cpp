@@ -86,5 +86,5 @@ int main()
     short Year  = ReadYear();
     short Month = ReadMonth();
     PrintCalender(Year, Month);
-    system("pause>0");
+    // system("pause>0"); // For Windows
 }
