@@ -39,7 +39,7 @@ short NumberOfDaysInYear ( short Month , short Year )
 
     int NumberDaysInMonth[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     
-    return ((Month == 2) ? (IsLeapYear(Year) ? 29 : 28 ) : NumberDaysInMonth[Month - 1]);
+    return ((Month == 2 ) ? (IsLeapYear(Year) ? 29 : 28 ) : NumberDaysInMonth[Month - 1]);
 }
 
 string NameOfMonth(short Month)
@@ -63,6 +63,7 @@ void PrintCalender(short Year, short Month)
 
     printf("\n----------------------%s---------------------------\n", NameOfMonth(Month).c_str());
     printf("\n   Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
+    
     int i ;
     for (i = 0 ; i < Curent ; i++)
         printf("     ");
@@ -77,7 +78,6 @@ void PrintCalender(short Year, short Month)
             printf("\n");
         }
     }
-
     printf("\n----------------------------------------------------\n");
 }
 
