@@ -61,7 +61,7 @@ void PrintCalender(short Year, short Month)
     short Curent = DayOrderOfWeek(1, Month, Year);
     NumberOfDays = NumberOfDaysInYear(Month, Year);
 
-    printf("\n----------------------%s------------------------------\n", NameOfMonth(Month).c_str());
+    printf("\n----------------------%s---------------------------\n", NameOfMonth(Month).c_str());
     printf("\n   Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
     int i ;
     for (i = 0 ; i < Curent ; i++)
@@ -84,7 +84,10 @@ void PrintCalender(short Year, short Month)
 int main()
 {
     short Year  = ReadYear();
-    short Month = ReadMonth();
-    PrintCalender(Year, Month);
+    // short Month = ReadMonth();
+    for (int i = 1; i <= 12 ; i++)
+    {
+        PrintCalender(Year, i);
+    }
     // system("pause>0"); // For Windows
 }
