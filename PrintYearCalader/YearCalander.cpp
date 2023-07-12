@@ -88,7 +88,6 @@ short ReadYear()
 
 int main()
 {
-    // PrintMonthCalander(1 , 2023);
     PrintCalander(ReadYear());
     system("pause>0");
 }
