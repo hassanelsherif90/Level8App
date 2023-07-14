@@ -44,7 +44,7 @@ stDate FullDate()
 
 bool IsDate1EqualThanDate2(stDate Date1, stDate Date2)
 {
-    return ((Date1.Year < Date2.Year) ? true : (Date1.Year == Date2.Year) ? (Date1.Month < Date2.Year) ? true :(Date1.Month == Date2.Year) ? (Date1.Day < Date2.Day) : false : false);
+    return ((Date1.Year == Date2.Year) ? (Date1.Month == Date2.Month) ? (Date1.Day == Date2.Day) : false : false);
 }
 
 int main()
@@ -54,10 +54,10 @@ int main()
 
     if(IsDate1EqualThanDate2(Date1, Date2)) 
     {
-        cout << "\nDate 1 Less Than Date 2 \n";
+        cout << "\nDate 1 Equal Date 2 \n";
     }
     else
     {
-        cout << "\nDate 2 Less Than Date 1 \n";
+        cout << "\nDate 1 Not Equal Date 2 \n";
     }
 }
