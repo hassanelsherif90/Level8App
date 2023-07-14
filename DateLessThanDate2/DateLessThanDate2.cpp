@@ -52,7 +52,7 @@ int main()
     stDate Date1 = FullDate();
     stDate Date2 = FullDate();
 
-    if(IsDate1LessThanDate2(Date1, Date2))
+    if(IsDate1LessThanDate2(Date1, Date2)) 
     {
         cout << "\nDate 1 Less Than Date 2 \n";
     }
