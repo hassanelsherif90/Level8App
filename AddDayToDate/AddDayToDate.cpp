@@ -118,5 +118,5 @@ int main()
     Date = GetDateFromDayOrderInYear(Day, Date);
 
     cout << Date.Day << "/" << Date.Month << "/" << Date.Year << endl;
-    system("pause>0");
+    // system("pause>0");
 }
