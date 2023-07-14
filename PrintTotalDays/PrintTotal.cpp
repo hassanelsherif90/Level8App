@@ -29,7 +29,7 @@ short NumberOfDays(short Month, short Year)
 short TotalDaysInRange(short Day, short Month, short Year)
 {
     int TotalDays;
-    for (int i = 0; i < Month; i++)
+    for (int i = 0; i <= Month - 1; i++)
     {
         TotalDays += NumberOfDays(i, Year);
     }
