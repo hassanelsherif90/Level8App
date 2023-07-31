@@ -3,7 +3,8 @@
 
 using namespace std;
 
-struct stDate{ 
+struct stDate
+{
     short Year;
     short Month;
     short Day;
@@ -44,15 +45,18 @@ stDate FullDate()
 
 bool IsDate1EqualThanDate2(stDate Date1, stDate Date2)
 {
-    return ((Date1.Year < Date2.Year) ? true : (Date1.Year == Date2.Year) ? (Date1.Month < Date2.Year) ? true :(Date1.Month == Date2.Year) ? (Date1.Day < Date2.Day) : false : false);
-}
+    return (Date1.Year < Date2.Year) ? true : 
+    ((Date1.Year == Date2.Year )? 
+    (Date1.Month < Date2.Month ? true :
+    (Date1.Month == Date2.Month ? Date1.Day < Date2.Day :false)) :false);
+    }
 
 int main()
 {
     stDate Date1 = FullDate();
     stDate Date2 = FullDate();
 
-    if(IsDate1EqualThanDate2(Date1, Date2)) 
+    if (IsDate1EqualThanDate2(Date1, Date2))
     {
         cout << "\nDate 1 Less Than Date 2 \n";
     }
@@ -60,4 +64,5 @@ int main()
     {
         cout << "\nDate 2 Less Than Date 1 \n";
     }
+    system("pause>0");
 }
