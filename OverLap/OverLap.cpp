@@ -9,6 +9,12 @@ struct stDate
     short Year;
 };
 
+struct stPeriod
+{
+    stDate StartDate;
+    stDate EndDate;
+};
+
 bool IsDate1BeforeDate2(stDate Date1, stDate Date2)
 {
     return (Date1.Year < Date2.Year) ? true : ((Date1.Year == Date2.Year) ? (Date1.Month < Date2.Month ? true : (Date1.Month == Date2.Month ? Date1.Day < Date2.Day : false)) : false);
@@ -16,7 +22,7 @@ bool IsDate1BeforeDate2(stDate Date1, stDate Date2)
 
 bool IsDate1EqualDate2(stDate Date1, stDate Date2)
 {
-    return (Date1.Year == Date2.Year) && (Date1.Month == Date2.Month) && (Date1.Day == Date2.Day);
+    return (Date1.Year == Date2.Year) ? ((Date1.Month == Date2.Month) ? ((Date1.Day == Date2.Day) ? true : false) : false) : false;
 }
 
 bool IsDate1AfterDate2(stDate Date1, stDate Date2)
@@ -80,17 +86,39 @@ stDate FullDate()
     return Date;
 }
 
+stPeriod ReadPeriod()
+{
+    stPeriod Period;
+    cout << "\nEnter Start Period  : \n";
+    Period.StartDate = FullDate();
+
+    cout << "\nEnter End Period  : \n";
+    Period.EndDate = FullDate();
+    return Period;
+}
+
+bool IsOverLapPeriods(stPeriod Period1, stPeriod Period2)
+{
+    if (
+        CompareDate(Period2.EndDate, Period1.StartDate) == enCompareDate::enBefore ||
+        CompareDate(Period2.StartDate, Period1.EndDate) == enCompareDate::enAfter)
+        return false;
+    else
+        return true;
+}
+
 int main()
 {
-    cout << "\nEnter Date1 : \n";
-    stDate Date1 = FullDate();
+    cout << "\nEnter Period 1 : \n";
+    stPeriod Period1 = ReadPeriod();
 
-    cout << "\nEnter Date2 : \n";
-    stDate Date2 = FullDate();
+    cout << "\nEnter Period 2 : \n";
+    stPeriod Period2 = ReadPeriod();
 
-    cout << "\nCompare Date Is : " << CompareDate(Date1, Date2) << endl;
+    if (IsOverLapPeriods(Period1, Period2))
+        cout << "\nYes : Periods OverLap \n";
+    else
+        cout << "\nNo : Periods do not OverLap \n";
 
-    // system("pause>0");
-
-    return 0;
+    system("pause>0");
 }
