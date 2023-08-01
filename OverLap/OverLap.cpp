@@ -92,7 +92,7 @@ stPeriod ReadPeriod()
     cout << "\nEnter Start Period  : \n";
     Period.StartDate = FullDate();
 
-    cout << "\nEnter End Period  : \n";
+    cout << "\nEnter End Period  :  \n";
     Period.EndDate = FullDate();
     return Period;
 }
