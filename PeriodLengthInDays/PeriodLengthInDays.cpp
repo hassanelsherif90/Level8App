@@ -73,7 +73,7 @@ bool IsDate1AfterleDate2(stDate Date1, stDate Date2)
 
 short ReadDay()
 {
-    cout << "\nplease enter day ? ";
+    cout << "please enter day ? ";
     short Day;
     cin >> Day;
     return Day;
@@ -81,7 +81,7 @@ short ReadDay()
 
 short ReadMonth()
 {
-    cout << "\nplease enter month ? ";
+    cout << "please enter month ? ";
     short month;
     cin >> month;
     return month;
@@ -89,7 +89,7 @@ short ReadMonth()
 
 short ReadYear()
 {
-    cout << "\nplease enter year ? ";
+    cout << "please enter year ? ";
     short year;
     cin >> year;
     return year;
