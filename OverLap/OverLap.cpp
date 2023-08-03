@@ -107,6 +107,23 @@ bool IsOverLapPeriods(stPeriod Period1, stPeriod Period2)
         return true;
 }
 
+bool IsInOverLap(stDate Date, stPeriod Period)
+{
+    return !(
+        CompareDate(Date, Period.StartDate) == enCompareDate::enBefore ||
+        CompareDate(Date, Period.EndDate) == enCompareDate::enAfter);
+}
+
+int CounterOverLap(stPeriod Period1, stPeriod Period2)
+{
+    int Counter = 0;
+    while (IsOverLapPeriods(Period1, Period2))
+    {
+        Counter++;
+    }
+    return Counter;
+}
+
 int main()
 {
     cout << "\nEnter Period 1 : \n";
@@ -115,10 +132,12 @@ int main()
     cout << "\nEnter Period 2 : \n";
     stPeriod Period2 = ReadPeriod();
 
-    if (IsOverLapPeriods(Period1, Period2))
-        cout << "\nYes : Periods OverLap \n";
-    else
-        cout << "\nNo : Periods do not OverLap \n";
+    // if (IsOverLapPeriods(Period1, Period2))
+    //     cout << "\nYes : Periods OverLap \n";
+    // else
+    //     cout << "\nNo : Periods do not OverLap \n";
+
+    cout << "\nOverLap Counter Is : " << CounterOverLap(Period1, Period2) << endl;
 
     system("pause>0");
 }
